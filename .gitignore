@@ -1,3 +1,7 @@
+*.sqlite
+*.iml
+*.eml
+
 # Compiled class file
 *.class
 
