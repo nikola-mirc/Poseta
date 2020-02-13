@@ -1,9 +1,0 @@
-launcher\Main.class
-launcher\Launcher.class
-controllers\ManagementController$1.class
-controllers\ManagementController.class
-utils\UtilsGUI.class
-models\Teacher.class
-utils\DBconnection.class
-controllers\MainController.class
-dao\TeacherDAO.class
