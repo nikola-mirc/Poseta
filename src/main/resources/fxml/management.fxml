@@ -1,0 +1,2052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="CENTER_LEFT" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	prefHeight="550.0" prefWidth="1050.0" stylesheets="@../style/style.css"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controllers.ManagementController">
+	<columnConstraints>
+		<ColumnConstraints hgrow="SOMETIMES"
+			maxWidth="850.0" minWidth="10.0" prefWidth="850.0" />
+		<ColumnConstraints hgrow="SOMETIMES"
+			maxWidth="495.199951171875" minWidth="10.0" prefWidth="150.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints minHeight="10.0" prefHeight="30.0"
+			vgrow="SOMETIMES" />
+	</rowConstraints>
+	<children>
+		<HBox id="parent" GridPane.halignment="CENTER"
+			GridPane.valignment="CENTER">
+			<children>
+				<JFXTabPane id="tabPane" depthTest="DISABLE"
+					maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+					minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0"
+					tabClosingPolicy="UNAVAILABLE" tabMinWidth="158.0">
+					<tabs>
+						<Tab text="Ponedeljak">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0"
+									prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<HBox alignment="CENTER" maxHeight="-Infinity"
+											maxWidth="-Infinity" minHeight="-Infinity"
+											minWidth="-Infinity" prefHeight="255.0" prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePon1"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPon1"
+																	editable="false" prefWidth="193.60009765625" text="1" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePon1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePon1" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePon1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePon1" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePon2"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPon2"
+																	editable="false" prefWidth="193.60009765625" text="2" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePon2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePon2" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePon2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePon2" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePon3"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPon3"
+																	editable="false" prefWidth="193.60009765625" text="3" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePon3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePon3" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePon3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePon3" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePon4"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPon4"
+																	editable="false" prefWidth="193.60009765625" text="4" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePon4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePon4" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePon4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePon4" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+										<HBox alignment="CENTER" layoutY="254.0"
+											maxHeight="-Infinity" maxWidth="-Infinity"
+											minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0"
+											prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePon5"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPon5"
+																	editable="false" prefWidth="193.60009765625" text="5" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePon5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePon5" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePon5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePon5" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePon6"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPon6"
+																	editable="false" prefWidth="193.60009765625" text="6" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePon6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePon6" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePon6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePon6" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePon7"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPon7"
+																	editable="false" prefWidth="193.60009765625" text="7" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePon7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePon7" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePon7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePon7" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePon8"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPon8"
+																	editable="false" prefWidth="193.60009765625" text="8" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePon8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePon8" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePon8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePon8" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Utorak">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0"
+									prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<HBox alignment="CENTER" maxHeight="-Infinity"
+											maxWidth="-Infinity" minHeight="-Infinity"
+											minWidth="-Infinity" prefHeight="255.0" prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableUto1"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colUto1"
+																	editable="false" prefWidth="193.60009765625" text="1" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableUto1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableUto1" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableUto1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto1" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableUto2"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colUto2"
+																	editable="false" prefWidth="193.60009765625" text="2" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableUto2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableUto2" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableUto2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto2" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableUto3"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colUto3"
+																	editable="false" prefWidth="193.60009765625" text="3" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableUto3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableUto3" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableUto3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto3" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableUto4"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colUto4"
+																	editable="false" prefWidth="193.60009765625" text="4" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableUto4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableUto4" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableUto4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto4" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+										<HBox alignment="CENTER" layoutY="254.0"
+											maxHeight="-Infinity" maxWidth="-Infinity"
+											minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0"
+											prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableUto5"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colUto5"
+																	editable="false" prefWidth="193.60009765625" text="5" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableUto5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableUto5" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableUto5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto5" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableUto6"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colUto6"
+																	editable="false" prefWidth="193.60009765625" text="6" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableUto6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableUto6" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableUto6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto6" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableUto7"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colUto7"
+																	editable="false" prefWidth="193.60009765625" text="7" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableUto7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableUto7" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableUto7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto7" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableUto8"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colUto8"
+																	editable="false" prefWidth="193.60009765625" text="8" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableUto8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableUto8" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableUto8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto8" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Sreda">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0"
+									prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<HBox alignment="CENTER" maxHeight="-Infinity"
+											maxWidth="-Infinity" minHeight="-Infinity"
+											minWidth="-Infinity" prefHeight="255.0" prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableSre1"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colSre1"
+																	editable="false" prefWidth="193.60009765625" text="1" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableSre1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableSre1" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableSre1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableSre1" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableSre2"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colSre2"
+																	editable="false" prefWidth="193.60009765625" text="2" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableSre2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableSre2" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableSre2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableSre2" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableSre3"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colSre3"
+																	editable="false" prefWidth="193.60009765625" text="3" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableSre3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableSre3" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableSre3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableSre3" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableSre4"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colSre4"
+																	editable="false" prefWidth="193.60009765625" text="4" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableSre4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableSre4" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableSre4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableSre4" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+										<HBox alignment="CENTER" layoutY="254.0"
+											maxHeight="-Infinity" maxWidth="-Infinity"
+											minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0"
+											prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableSre5"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colSre5"
+																	editable="false" prefWidth="193.60009765625" text="5" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableSre5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableSre5" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableSre5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableSre5" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableSre6"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colSre6"
+																	editable="false" prefWidth="193.60009765625" text="6" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableSre6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableSre6" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableSre6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableSre6" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableSre7"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colSre7"
+																	editable="false" prefWidth="193.60009765625" text="7" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableSre7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableSre7" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableSre7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableSre7" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableSre8"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colSre8"
+																	editable="false" prefWidth="193.60009765625" text="8" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="removeTableSre8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableUto8" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+																<JFXButton id="miniButton"
+																	fx:id="addTableSre8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableSre8" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Četvrtak">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0"
+									prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<HBox alignment="CENTER" maxHeight="-Infinity"
+											maxWidth="-Infinity" minHeight="-Infinity"
+											minWidth="-Infinity" prefHeight="255.0" prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableCet1"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colCet1"
+																	editable="false" prefWidth="193.60009765625" text="1" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableCet1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableCet1" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableCet1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableCet1" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableCet2"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colCet2"
+																	editable="false" prefWidth="193.60009765625" text="2" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableCet2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableCet2" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableCet2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableCet2" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableCet3"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colCet3"
+																	editable="false" prefWidth="193.60009765625" text="3" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableCet3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableCet3" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableCet3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableCet3" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableCet4"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colCet4"
+																	editable="false" prefWidth="193.60009765625" text="4" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableCet4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableCet4" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableCet4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableCet4" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+										<HBox alignment="CENTER" layoutY="254.0"
+											maxHeight="-Infinity" maxWidth="-Infinity"
+											minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0"
+											prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableCet5"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colCet5"
+																	editable="false" prefWidth="193.60009765625" text="5" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableCet5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableCet5" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableCet5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableCet5" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableCet6"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colCet6"
+																	editable="false" prefWidth="193.60009765625" text="6" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableCet6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableCet6" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableCet6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableCet6" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableCet7"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colCet7"
+																	editable="false" prefWidth="193.60009765625" text="7" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableCet7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableCet7" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableCet7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableCet7" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tableCet8"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colCet8"
+																	editable="false" prefWidth="193.60009765625" text="8" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTableCet8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTableCet8" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTableCet8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTableCet8" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Petak">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0"
+									prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<HBox alignment="CENTER" maxHeight="-Infinity"
+											maxWidth="-Infinity" minHeight="-Infinity"
+											minWidth="-Infinity" prefHeight="255.0" prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePet1"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPet1"
+																	editable="false" prefWidth="193.60009765625" text="1" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePet1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePet1" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePet1" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePet1" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePet2"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPet2"
+																	editable="false" prefWidth="193.60009765625" text="2" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePet2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePet2" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePet2" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePet2" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePet3"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPet3"
+																	editable="false" prefWidth="193.60009765625" text="3" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePet3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePet3" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePet3" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePet3" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePet4"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPet4"
+																	editable="false" prefWidth="193.60009765625" text="4" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePet4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePet4" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePet4" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePet4" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+										<HBox alignment="CENTER" layoutY="254.0"
+											maxHeight="-Infinity" maxWidth="-Infinity"
+											minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0"
+											prefWidth="850.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePet5"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPet5"
+																	editable="false" prefWidth="193.60009765625" text="5" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePet5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePet5" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePet5" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePet5" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePet6"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPet6"
+																	editable="false" prefWidth="193.60009765625" text="6" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePet6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePet6" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePet6" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePet6" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePet7"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPet7"
+																	editable="false" prefWidth="193.60009765625" text="7" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePet7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePet7" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePet7" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePet7" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER">
+													<children>
+														<TableView id="tableLight" fx:id="tablePet8"
+															maxHeight="-Infinity" maxWidth="-Infinity"
+															minHeight="-Infinity" minWidth="-Infinity"
+															prefHeight="240.0" prefWidth="175.0">
+															<placeholder>
+																<Label text="Nema podataka" />
+															</placeholder>
+															<columns>
+																<TableColumn fx:id="colPet8"
+																	editable="false" prefWidth="193.60009765625" text="8" />
+															</columns>
+															<columnResizePolicy>
+																<TableView
+																	fx:constant="CONSTRAINED_RESIZE_POLICY" />
+															</columnResizePolicy>
+														</TableView>
+														<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+															maxWidth="-Infinity" minHeight="-Infinity"
+															minWidth="-Infinity" prefHeight="240.0" prefWidth="35.0">
+															<padding>
+																<Insets top="5.0" />
+															</padding>
+															<children>
+																<JFXButton id="miniButton"
+																	fx:id="addTablePet8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#addTablePet8" prefHeight="25.0"
+																	prefWidth="25.0" text="+" />
+																<JFXButton id="miniButton"
+																	fx:id="removeTablePet8" buttonType="RAISED"
+																	maxHeight="-Infinity" maxWidth="-Infinity"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	onAction="#removeTablePet8" prefHeight="25.0"
+																	prefWidth="25.0" text="-">
+																	<VBox.margin>
+																		<Insets top="5.0" />
+																	</VBox.margin>
+																</JFXButton>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+											</children>
+										</HBox>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+					<HBox.margin>
+						<Insets />
+					</HBox.margin>
+				</JFXTabPane>
+			</children>
+		</HBox>
+		<VBox id="parent" alignment="TOP_CENTER" maxHeight="-Infinity"
+			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+			prefHeight="550.0" prefWidth="200.0" GridPane.columnIndex="1">
+			<children>
+				<ToolBar id="searchToolbar" maxHeight="-Infinity"
+					maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+					prefHeight="35.0" prefWidth="200.0">
+					<items>
+						<HBox spacing="5.0">
+							<children>
+								<HBox maxHeight="-Infinity" maxWidth="-Infinity"
+									minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0"
+									prefWidth="25.0">
+									<children>
+										<ImageView fitHeight="25.0" fitWidth="25.0"
+											pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@../images/search.png" />
+											</image>
+											<HBox.margin>
+												<Insets top="3.0" />
+											</HBox.margin>
+										</ImageView>
+									</children>
+								</HBox>
+								<TextField id="textField" fx:id="searchTextfield"
+									maxHeight="-Infinity" maxWidth="-Infinity"
+									minHeight="-Infinity" minWidth="-Infinity" onAction="#search"
+									prefHeight="30.0" prefWidth="145.0" promptText="Pretraži..." />
+							</children>
+						</HBox>
+					</items>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<VBox.margin>
+						<Insets bottom="8.0" top="7.0" />
+					</VBox.margin>
+				</ToolBar>
+				<TableView id="table" fx:id="tableAll"
+					maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+					minWidth="-Infinity" prefHeight="380.0" prefWidth="180.0">
+					<placeholder>
+						<Label text="Nema podataka" />
+					</placeholder>
+					<columns>
+						<TableColumn fx:id="colAll"
+							prefWidth="173.59996950626373" text="Svi nastavnici" />
+					</columns>
+					<VBox.margin>
+						<Insets bottom="7.0" />
+					</VBox.margin>
+				</TableView>
+				<HBox alignment="CENTER" maxHeight="-Infinity"
+					maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+					prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+					<children>
+						<JFXButton id="miniButton" fx:id="addBtn"
+							maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+							minWidth="-Infinity" onAction="#addToAll" prefHeight="30.0"
+							prefWidth="70.0" text="Dodaj" />
+						<JFXButton id="miniButton" fx:id="removeBtn"
+							maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+							minWidth="-Infinity" onAction="#removeFromAll" prefHeight="30.0"
+							prefWidth="70.0" text="Ukloni" />
+					</children>
+					<VBox.margin>
+						<Insets top="3.0" />
+					</VBox.margin>
+				</HBox>
+				<TextField id="textField" fx:id="nameTextField"
+					maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+					minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0"
+					promptText="Ime">
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</TextField>
+				<TextField id="textField" fx:id="surnameTextField"
+					maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+					minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0"
+					promptText="Prezime">
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</TextField>
+			</children>
+		</VBox>
+	</children>
+</GridPane>
