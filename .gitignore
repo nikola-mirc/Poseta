@@ -1,6 +1,9 @@
-*.sqlite
-*.iml
-*.eml
+.sqlite
+.iml
+.eml
+.userlibraries
+.xml
+/target
 
 # Compiled class file
 *.class
