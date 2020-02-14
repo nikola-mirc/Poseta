@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBconnection {
 
-    private static final String CONNECTION = "jdbc:sqlite:database.sqlite";
+    private static final String CONNECTION = "jdbc:sqlite:C:/Poseta/database.sqlite";
     Connection connection;
 
     public DBconnection() {
