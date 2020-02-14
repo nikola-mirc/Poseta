@@ -1,4 +1,4 @@
 # Poseta
-A simple CRUD app made for a client.
+A simple CRUD app being made for a client.
 
 // work in progress
