@@ -3,7 +3,7 @@
 ![](https://i.imgur.com/zAw1ccv.png)
 
 <h3>About</h3>
-<p>The main purpose of the app is to provide a random person draw from a custom weekly schedule</p>
+<p>The main purpose of the app is to provide a random person draw from a custom weekly schedule.</p>
 
 Feel free to download:
 
