@@ -22,8 +22,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import models.Teacher;
 import utils.DBconnection;
+import view.GUIutils;
 
-public class MainController implements Initializable {
+public class MainController extends GUIutils implements Initializable {
 
 	@FXML
 	private ComboBox<String> dayCombo;
@@ -46,40 +47,33 @@ public class MainController implements Initializable {
 	}
 
 	@FXML
-	void openTableManagement(ActionEvent event) {
-		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("fxml/management.fxml"));
-			Parent parent = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.getIcons().add(new Image(MainController.class.getResourceAsStream("/images/icon.png")));
-			stage.setTitle("Poseta");
-			stage.initModality(Modality.APPLICATION_MODAL);
-			stage.setScene(new Scene(parent));
-			stage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
+	void randomDraw(ActionEvent event) {
+		Random random = new Random();
+		String selectedDay = dayCombo.getSelectionModel().getSelectedItem();
+		String selectedClass = classCombo.getSelectionModel().getSelectedItem();
+
+		if (selectedDay != null && selectedClass != null) {
+			if (selectedDay.equals("Četvrtak")) {
+				selectedDay = "Cetvrtak";
+			}
+			ObservableList<Teacher> obsList = TeacherDAO
+					.getListFromTable(selectedDay.toLowerCase().concat(selectedClass));
+			if (obsList.size() == 0) {
+				resultLabel.setText("Nema podataka");
+			} else {
+				Teacher selected = obsList.get(random.nextInt(obsList.size()));
+				resultLabel.setText(selected.getName().concat(" ").concat(selected.getSurname()));
+			}
 		}
 	}
 
 	@FXML
-	void randomDraw(ActionEvent event) {
-		Random random = new Random();
-		String day = dayCombo.getSelectionModel().getSelectedItem();
-		String time = classCombo.getSelectionModel().getSelectedItem();
-
-		ObservableList<Teacher> obsList = TeacherDAO.getListFromTable(day.toLowerCase().concat(time));
-
-		if (obsList.size() == 0) {
-			resultLabel.setText("Nema podataka");
-		} else {
-			Teacher selected = obsList.get(random.nextInt(obsList.size()));
-			resultLabel.setText(selected.getName().concat(" ").concat(selected.getSurname()));
-		}
+	void openTableManagement(ActionEvent event) {
+		loadFXML(Modality.APPLICATION_MODAL, "fxml/management.fxml");
 	}
 
 	@FXML
 	void openInfo(ActionEvent event) {
-
+		loadFXML(Modality.APPLICATION_MODAL, "fxml/info.fxml");
 	}
-
 }

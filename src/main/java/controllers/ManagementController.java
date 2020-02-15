@@ -82,11 +82,23 @@ public class ManagementController implements Initializable {
 
 	@FXML
 	void addToAll(ActionEvent event) {
-		TeacherDAO.insert("nastavnici", nameTextField.getText(), surnameTextField.getText());
-		nameTextField.clear();
-		surnameTextField.clear();
-		loadTable(tableAll, colAll, "nastavnici");
-		initializeSearch();
+		boolean isDuplicate = false;
+		ObservableList<Teacher> list = TeacherDAO.getListFromTable("nastavnici");
+		for (Teacher teacher : list) {
+			if ((teacher.getName().equals(nameTextField.getText()))
+					&& (teacher.getSurname().equals(surnameTextField.getText()))) {
+				infoAlert("Poseta", "Nastavnik se već nalazi u glavnoj tabeli");
+				isDuplicate = true;
+				break;
+			}
+		}
+		if (!isDuplicate) {
+			TeacherDAO.insert("nastavnici", nameTextField.getText(), surnameTextField.getText());
+			nameTextField.clear();
+			surnameTextField.clear();
+			loadTable(tableAll, colAll, "nastavnici");
+			initializeSearch();
+		}
 	}
 
 	@FXML
@@ -95,7 +107,7 @@ public class ManagementController implements Initializable {
 		String surname = tableAll.getSelectionModel().getSelectedItem().getSurname();
 		ObservableList<String> allTablesList = TeacherDAO.getTableNames();
 
-		ButtonType answer = confirmationAlert(AlertType.CONFIRMATION, "Poseta", (name + " " + surname
+		ButtonType answer = confirmationAlert("Poseta", (name + " " + surname
 				+ " će biti izbrisan iz tabele 'nastavnici' i iz svih tabela u bazi. Da li ste sigurni?"));
 
 		if (answer == ButtonType.OK) {
@@ -105,6 +117,28 @@ public class ManagementController implements Initializable {
 			Thread.sleep(500);
 			initializeTables();
 		}
+	}
+
+	private void initializeSearch() {
+		ObservableList<Teacher> searchList = TeacherDAO.getListFromTable("nastavnici");
+		FilteredList<Teacher> filteredData = new FilteredList<>(searchList, predicate -> true);
+		searchTextfield.textProperty().addListener((observable, oldValue, newValue) -> {
+			filteredData.setPredicate(teacher -> {
+				if (newValue == null || newValue.isEmpty()) {
+					return true;
+				}
+				String lowerCaseFilter = newValue.toLowerCase();
+				if (teacher.getName().toLowerCase().contains(lowerCaseFilter)) {
+					return true;
+				} else if (teacher.getSurname().toLowerCase().contains(lowerCaseFilter)) {
+					return true;
+				}
+				return false;
+			});
+		});
+		SortedList<Teacher> sortedData = new SortedList<>(filteredData);
+		sortedData.comparatorProperty().bind(tableAll.comparatorProperty());
+		tableAll.setItems(sortedData);
 	}
 
 	/**
@@ -748,28 +782,6 @@ public class ManagementController implements Initializable {
 		loadTable(tablePet8, colPet8, "petak8");
 	}
 
-	private void initializeSearch() {
-		ObservableList<Teacher> searchList = TeacherDAO.getListFromTable("nastavnici");
-		FilteredList<Teacher> filteredData = new FilteredList<>(searchList, predicate -> true);
-		searchTextfield.textProperty().addListener((observable, oldValue, newValue) -> {
-			filteredData.setPredicate(teacher -> {
-				if (newValue == null || newValue.isEmpty()) {
-					return true;
-				}
-				String lowerCaseFilter = newValue.toLowerCase();
-				if (teacher.getName().toLowerCase().contains(lowerCaseFilter)) {
-					return true;
-				} else if (teacher.getSurname().toLowerCase().contains(lowerCaseFilter)) {
-					return true;
-				}
-				return false;
-			});
-		});
-		SortedList<Teacher> sortedData = new SortedList<>(filteredData);
-		sortedData.comparatorProperty().bind(tableAll.comparatorProperty());
-		tableAll.setItems(sortedData);
-	}
-
 	private void disableButtonsUntilSelection() {
 		BooleanBinding booleanBinding = new BooleanBinding() {
 			{
@@ -876,8 +888,8 @@ public class ManagementController implements Initializable {
 		removeTablePet8.disableProperty().bind(Bindings.isEmpty(tablePet8.getSelectionModel().getSelectedItems()));
 	}
 
-	private ButtonType confirmationAlert(AlertType alertType, String title, String contentText) {
-		Alert alert = new Alert(alertType);
+	private ButtonType confirmationAlert(String title, String contentText) {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 
 		((Button) alert.getDialogPane().lookupButton(ButtonType.OK)).setText("Da");
@@ -894,6 +906,23 @@ public class ManagementController implements Initializable {
 		alert.showAndWait();
 
 		return alert.getResult();
+	}
+
+	private void infoAlert(String title, String contentText) {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+
+		((Button) alert.getDialogPane().lookupButton(ButtonType.OK)).setText("U redu");
+
+		stage.getIcons().add(new Image("/images/icon.png"));
+
+		alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+		alert.setTitle(title);
+		alert.setHeaderText(null);
+		alert.setGraphic(null);
+		alert.setContentText(contentText);
+		alert.initModality(Modality.APPLICATION_MODAL);
+		alert.showAndWait();
 	}
 
 }
