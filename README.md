@@ -7,7 +7,7 @@
 
 Feel free to download:
 
-- a preview file with limited datbaase functionalities: [JAR](https://drive.google.com/open?id=1r9A3XM8ot9ec2fEm3G7tDpDXZV0P4TNW) or [EXE](https://drive.google.com/open?id=1Gh6h0Dqgb7qndximbZQwLcbXiudDOZfF)
+- a preview file with limited database functionalities: [JAR](https://drive.google.com/open?id=1r9A3XM8ot9ec2fEm3G7tDpDXZV0P4TNW) or [EXE](https://drive.google.com/open?id=1Gh6h0Dqgb7qndximbZQwLcbXiudDOZfF)
 - the full installer [here.](https://drive.google.com/open?id=1OwqwryXg6WmvXDIstJpKmCCg-Rx_L0SE)
 
 ```
